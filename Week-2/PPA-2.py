@@ -1,7 +1,14 @@
 import time
 
 def sortInRange(L,r):
-    
+    cdict = dict.fromkeys(range(r),0)
+    idx=0
+    for i in L:
+        cdict[i]+=1
+    for key in cdict:
+        for i in range(cdict[key]):
+            L[idx]=key
+            idx+=1
 
 def sortInRangeIdeal(L, r):
 # Create a dictionary with r keys for each integer in range r, initialize every value to 0
